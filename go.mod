@@ -1,6 +1,6 @@
 module github.com/ahmetb/serverless-url-shortener
 
-go 1.14
+go 1.19
 
 require (
 	cloud.google.com/go v0.89.0 // indirect
