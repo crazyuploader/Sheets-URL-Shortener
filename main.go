@@ -115,7 +115,7 @@ func (s *server) home(w http.ResponseWriter, req *http.Request) {
 	</head>
 	<body>
 	<h1>URL Shortener</h1>
-	<p>It looks like you have navigated to this page without any parameters in the URL. Please enter a URL to shorten by adding it as a parameter to the URL (e.g. https://link.devjugal.com/github).</p>
+	<p>It looks like you have navigated to this page without any parameters in the URL. Please enter a URL to shorten by adding it as a parameter to the URL (e.g. <a href="https://link.devjugal.com/github">https://link.devjugal.com/github</a>)).</p>
 	</body>
 	</html>`)
 }
