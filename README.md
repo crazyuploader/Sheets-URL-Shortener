@@ -4,11 +4,11 @@ This is a simple web server that can redirect a pre-defined set of URLs in
 Google Sheets. All you need to do is define a [Google Sheets][ex] like the
 following, and deploy a simple app just by clicking around.
 
-| shortcut | url |
-|----|---|
-| `code` | `https://github.com/ahmetb/` |
-| `book` | `https://docs.google.com/forms/d/e/1FAIpQLSefArw8NWiha6YCaoTccGZmo4QvuDYY4s87Y_tjW6h4al_4NQ/viewform` |
-| `yt` | `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
+| shortcut | url                                                                                                   |
+| -------- | ----------------------------------------------------------------------------------------------------- |
+| `code`   | `https://github.com/ahmetb/`                                                                          |
+| `book`   | `https://docs.google.com/forms/d/e/1FAIpQLSefArw8NWiha6YCaoTccGZmo4QvuDYY4s87Y_tjW6h4al_4NQ/viewform` |
+| `yt`     | `https://www.youtube.com/watch?v=dQw4w9WgXcQ`                                                         |
 
 **Costs:** This can be deployed to [Google Cloud Run](https://cloud.run) and run
 for **free** thanks to [generous free tier][free tier] (+Google Sheets is free
@@ -19,9 +19,9 @@ with a Gmail account as well).
 This redirector also supports path additions on top of base URLs, for example,
 with the sheet row:
 
-| shortcut | url |
-|----|---|
-| `gcp` | `https://github.com/GoogleCloudPlatform` |
+| shortcut | url                                      |
+| -------- | ---------------------------------------- |
+| `gcp`    | `https://github.com/GoogleCloudPlatform` |
 
 The `go.ahmet.dev/gcp/golang-samples` will be redirected to
 `https://github.com/GoogleCloudPlatform/golang-samples`.
@@ -59,13 +59,13 @@ The `go.ahmet.dev/gcp/golang-samples` will be redirected to
 
 This server can be configured with these following parameters:
 
-| Environment Variable | Description |
-|-----|------|
-| `SHEET_NAME` | (optional) If you have multiple sheets in a spreadsheet, specify the sheet name. |
-| `CACHE_TTL` | (optional) how frequently the spreadsheet must be reloaded (default: `5s`) |
-| `HOME_REDIRECT` | (optional) which url to redirect when root url (`/`) is visited
-| `LISTEN_ADDR` | (optional) which network address to listen on (default `""` which means all interfaces) |
-| `PORT` | (optional) http port to listen on (default `8080`).
+| Environment Variable | Description                                                                             |
+| -------------------- | --------------------------------------------------------------------------------------- |
+| `SHEET_NAME`         | (optional) If you have multiple sheets in a spreadsheet, specify the sheet name.        |
+| `CACHE_TTL`          | (optional) how frequently the spreadsheet must be reloaded (default: `5s`)              |
+| `HOME_REDIRECT`      | (optional) which url to redirect when root url (`/`) is visited                         |
+| `LISTEN_ADDR`        | (optional) which network address to listen on (default `""` which means all interfaces) |
+| `PORT`               | (optional) http port to listen on (default `8080`).                                     |
 
 ## Disclaimer
 
