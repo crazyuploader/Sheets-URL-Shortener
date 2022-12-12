@@ -108,10 +108,16 @@ func (s *server) home(w http.ResponseWriter, req *http.Request) {
 
 	w.WriteHeader(http.StatusNotFound)
 	fmt.Fprintf(w, `<!DOCTYPE html>
-	<html><head><title>Not found</title></head><body><h1>Not found :(</h1>
-	<p>This is home page for a URL redirector service.</p>
-	<p>The URL is missing the shortcut in the path.</p>
-	</body></html>`)
+	<html>
+	<head>
+	<title>Link Shortener for devjugal.com</title>
+	<style>body{background-color:#fafafa;text-align:center}</style>
+	</head>
+	<body>
+	<h1>URL Shortener</h1>
+	<p>It looks like you have navigated to this page without any parameters in the URL. Please enter a URL to shorten by adding it as a parameter to the URL (e.g. https://link.devjugal.com/github).</p>
+	</body>
+	</html>`)
 }
 
 func (s *server) redirect(w http.ResponseWriter, req *http.Request) {
@@ -127,7 +133,17 @@ func (s *server) redirect(w http.ResponseWriter, req *http.Request) {
 	}
 	if redirTo == nil {
 		w.WriteHeader(http.StatusNotFound)
-		fmt.Fprintf(w, "404 not found")
+		fmt.Fprintf(w, `<!DOCTYPE html>
+		<html>
+		<head>
+		<title>404 Error</title>
+		<style>body{background-color:#fafafa;text-align:center}</style>
+		</head>
+		<body>
+		<h1>404 Error</h1>
+		<p>Oops, it looks like you've stumbled upon a page that doesn't exist!</p>
+		</body>
+		</html>`)
 		return
 	}
 
