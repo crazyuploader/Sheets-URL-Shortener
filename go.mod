@@ -5,7 +5,6 @@ go 1.19
 require google.golang.org/api v0.104.0
 
 require (
-	cloud.google.com/go v0.105.0 // indirect
 	cloud.google.com/go/compute v1.13.0 // indirect
 	cloud.google.com/go/compute/metadata v0.2.2 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
