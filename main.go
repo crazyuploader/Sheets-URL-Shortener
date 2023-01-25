@@ -106,7 +106,7 @@ func (s *server) home(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	w.WriteHeader(http.StatusFound)
+	w.WriteHeader(http.StatusNoContent)
 	fmt.Fprintf(w, `<!DOCTYPE html>
 	<html>
 	<head>
