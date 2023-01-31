@@ -2,7 +2,7 @@ module github.com/ahmetb/serverless-url-shortener
 
 go 1.19
 
-require google.golang.org/api v0.106.0
+require google.golang.org/api v0.109.0
 
 require (
 	cloud.google.com/go/compute v1.14.0 // indirect
